@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import SignInPage from './pages/signIn';
 import SignUpPage from './pages/signUp';
 import ErrorRoute from './pages/errorRoute';
-
+import DashboardPage from './pages/dashboard';
+import BalancePage from './pages/balance';
 
 const App = () => {
   const myRouter = createBrowserRouter([
@@ -20,6 +21,14 @@ const App = () => {
     {
       path: "/register",
       element: <SignUpPage />,
+    },
+    {
+      path: "/dashboard",
+      element: <DashboardPage />,
+    },
+    {
+      path: "/balance",
+      element: <BalancePage />,
     },
   ]);
   
