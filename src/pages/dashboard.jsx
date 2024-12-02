@@ -1,5 +1,9 @@
-import Card from "../components/Element/Card";
 import MainLayout from "../components/Layouts/MainLayout";
+import Card from "../components/Element/Card";
+import CardBill from "../components/Fragment/Dashboard/Cardbill";
+import CardExpenseBreakdown from "../components/Fragment/Dashboard/CardExpenseBreakdown";
+import CardTransaction from "../components/Fragment/Dashboard/CardTransaction";
+
 
 const DashboardPage = () => {
   return (
@@ -8,14 +12,10 @@ const DashboardPage = () => {
       <div className="md:grid md:grid-cols-3 md:gap-x-6">
         <Card title="Total Balance" />
         <Card title="Goals" />
-        <Card title="Upcoming Bill" /> 
-        <div className="md:col-span-1">
-          <Card title="Recent Transaction" />
-        </div>
-        <div className="md:col-span-2 flex flex-col flex-1">
-          <Card title="Statistics" />
-          <Card title="Expenses Breakdown" />
-        </div>
+        <CardBill />
+        <CardTransaction />
+        <Card variant="md:col-span-2" title="Statistics" />
+        <CardExpenseBreakdown />
       </div>
       {/* bottom content end*/}
     </MainLayout>
